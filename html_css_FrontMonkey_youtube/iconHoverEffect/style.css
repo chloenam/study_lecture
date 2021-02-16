@@ -1,0 +1,23 @@
+.social {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+i {
+  margin: auto 25px;
+  cursor: pointer;
+  color: gray;
+  font-size: 4rem;
+  transition: 0.5s;
+}
+
+/* social 부분이 hover될때 hover 안된 i  */
+.social:hover i:not(:hover) {
+  opacity: 0.1;
+}
+
+i:hover {
+  transform: translateY(-10px);
+  color: black;
+}

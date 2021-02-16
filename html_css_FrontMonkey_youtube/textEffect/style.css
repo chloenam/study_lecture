@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+h1 {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 700;
+  background: url(https://images2.pixlis.com/background-image-stripes-and-lines-seamless-tileable-hint-of-red-light-coral-232ejc.png);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50% 0%;
+  }
+}
