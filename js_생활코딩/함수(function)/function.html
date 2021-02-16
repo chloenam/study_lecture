@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function</title>
+  </head>
+  <body>
+    <!-- 함수란 입력과 출력이 이루어지는것 -->
+    <h1>Function</h1>
+    <h2>Basic</h2>
+    <ul>
+      <script>
+        function two() {
+          document.write('<li>2-1</li>');
+          document.write('<li>2-2</li>');
+        }
+        document.write('<li>1</li>');
+        two();
+        document.write('<li>3</li>');
+        two();
+      </script>
+    </ul>
+
+    <!-- 매개변수 & 인자 -->
+    <h2>Parameter & Argument</h2>
+    <script>
+      function onePlusOne() {
+        document.write(1 + 1 + '<br>');
+      }
+      onePlusOne();
+
+      // function name(Parameter){};
+      function sum(left, right) {
+        document.write(left + right + '<br>');
+      }
+      function sumColor(left, right) {
+        document.write('<div style="color:red">' + (left + right) + '</div>');
+        // (('string'+numger)+number)+'string'= string(저 순서로 계산이 되므로 string 으로 출력됨)
+        // 'string'+(numger+number)+'string'= number(숫자로 계산하고싶을시 number 부분을 확실하게 표시해주기)
+      }
+      // name(Argument);
+      sum(4, 5);
+      sum(7, 9);
+      sumColor(2, 3);
+    </script>
+
+    <!-- 출력 -->
+    <h2>Return</h2>
+    <script>
+      // 다양한 맥락에서 사용할 수 있는 return 함수
+      function sum2(left, right) {
+        return left + right;
+      }
+
+      document.write(sum2(2, 3) + '<br>');
+      document.write('<div style="color:red">' + sum2(2, 3) + '</div>');
+      document.write('<div style="font-size:2rem">' + sum2(2, 3) + '</div>');
+    </script>
+  </body>
+</html>

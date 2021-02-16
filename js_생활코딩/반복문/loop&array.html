@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop & Array</title>
+  </head>
+  <body>
+    <h1>Loop & Array</h1>
+    <script>
+      var fruits = ['apple', 'lemon', 'grape', 'orange', 'banana'];
+    </script>
+    <h2>Fruits</h2>
+    <ul>
+      <script>
+        var i = 0;
+        // i < 변수.length 를 썼을 시 코드 모두 바꾸지 않아도 배열에 갯수에 따라 반복문이 실행됨
+        while (i < fruits.length) {
+          document.write('<li><a href="https://en.dict.naver.com/#/search?range=all&query=' + fruits[i] + '">' + fruits[i] + '</a></li>');
+          //'+var+' 이 문법이 `${var}`로 바뀐걸로 아는데..조금더 알아보기..
+          i = i + 1;
+        }
+      </script>
+    </ul>
+  </body>
+</html>
