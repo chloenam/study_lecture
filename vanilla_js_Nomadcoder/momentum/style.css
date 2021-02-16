@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Redressed&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #363d3f;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Redressed", cursive;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
+}
+
+main {
+  width: 400px;
+  height: 400px;
+  background-color: rgba(58, 33, 78, 0.788);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.js-clock {
+  margin-bottom: 20px;
+}
+
+.form,
+.grettings {
+  display: none;
+}
+
+.js-form input,
+.js-toDoForm input {
+  height: 20px;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 1px;
+  margin-bottom: 15px;
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+}
+
+input::placeholder {
+  color: #fff;
+  font-family: "Redressed", cursive;
+  font-size: 18px;
+}
+.js-form input:focus,
+.js-toDoForm input:focus {
+  outline: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-family: "Redressed", cursive;
+  font-size: 16px;
+}
+
+input:focus::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.showing {
+  display: block;
+  font-size: 26px;
+  margin-bottom: 18px;
+}
+.js-toDoList {
+  margin-bottom: 10px;
+}
+.js-toDoList li {
+  margin: 10px auto;
+}
+.js-toDoList button {
+  background-color: transparent;
+  border: none;
+  margin-left: 10px;
+}
+
+.js-weather {
+  font-size: 16px;
+}
