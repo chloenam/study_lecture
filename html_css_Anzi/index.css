@@ -1,0 +1,100 @@
+@keyframes circleShow {
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(0.5);
+    background-color: aqua;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.text-area {
+  margin-top: 90px;
+  margin-left: 24px;
+}
+
+.text-area h1 {
+  margin-bottom: 22px;
+  animation: showText 0.7s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.text-area .desc {
+}
+
+.text-area .line {
+  display: inline-block;
+  position: relative;
+  top: -7px;
+  width: 46px;
+  height: 1px;
+  background-color: #ffe6cf;
+  opacity: 0.2;
+}
+
+.volume {
+  margin-bottom: 85px;
+}
+
+.circle-wrapper {
+  position: relative;
+  height: 250px;
+  margin-top: 40px;
+  margin-left: 24px;
+}
+
+.circle {
+  position: absolute;
+  width: 246px;
+  height: 246px;
+  border-radius: 50%;
+  animation: circleShow 1s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  animation-fill-mode: both;
+}
+
+.circle:first-child {
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  animation-delay: 0.1s;
+}
+
+.circle:nth-child(2) {
+  left: 100px;
+  background-color: #ffc000;
+  animation-delay: 0.2s;
+}
+
+.circle:last-child {
+  left: 200px;
+  background-color: #fedd15;
+  /* transition: 1s; */
+  animation-delay: 0.3s;
+}
+
+/* .circle:last-child:hover {
+  background-color: blue;
+} */
+
+#bedge {
+  position: fixed;
+  top: 0;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background-color: #ffc000;
+  color: #485861;
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 11px;
+  /* 더 좋은 방법 있지만 현재는 이렇게 */
+  padding-top: 18px;
+  padding-left: 13px;
+  box-sizing: border-box;
+  animation: slideDown 0.5s;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+}

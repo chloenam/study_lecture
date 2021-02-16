@@ -1,0 +1,114 @@
+.search {
+  position: relative;
+  margin: 20px;
+  animation: slideDown 0.7s;
+  animation-fill-mode: both;
+}
+
+.search form {
+  display: flex;
+}
+
+.search .search-field {
+  width: 100%;
+  flex-shrink: 0;
+  transition: 0.3s;
+}
+
+.search .search-field:focus {
+  flex-shrink: initial;
+}
+
+/* 형제요소 선택시 ~ 사용 */
+.search .search-field:focus ~ .cancle-btn {
+  opacity: 1;
+}
+
+.search .cancle-btn {
+  /* 0 : 줄어들지 않겠다 1:줄어들어도 됨 */
+  flex-shrink: 0;
+  margin-left: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.search-icon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  opacity: 0.3;
+}
+
+.text-area {
+  margin: 24px;
+  margin-top: 124px;
+  margin-bottom: 12px;
+}
+
+.text-area .desc {
+  margin-top: 12px;
+}
+
+/* old gird.. 
+
+.list {
+  font-size: 0;
+  padding: 16px;
+}
+
+.list .item {
+  *  % 값을 사용할땐 부모영역에 height가 있어야함 *
+  width: calc(50% - 16px);
+  height: 148px;
+  background-color: #fff;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin: 8px;
+  border-radius: 8px;
+}
+
+*/
+
+/* new grid */
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 148px;
+  grid-column-gap: 17px;
+  grid-row-gap: 18px;
+  padding: 24px;
+}
+
+.list .item {
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.list .item:first-child {
+  background-image: url(./assets/likes-1.jpg);
+}
+
+.list .item:nth-child(2) {
+  background-image: url(./assets/likes-2.jpg);
+}
+
+.list .item:nth-child(3) {
+  background-image: url(./assets/likes-3.jpg);
+}
+
+.list .item:nth-child(4) {
+  background-image: url(./assets/likes-4.jpg);
+}
+
+.list .item:nth-child(5) {
+  background-image: url(./assets/likes-1.jpg);
+}
+
+.list .item:last-child {
+  background-image: url(./assets/likes-2.jpg);
+}

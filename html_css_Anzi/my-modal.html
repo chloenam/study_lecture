@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magazine</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./my-modal.css" />
+  </head>
+  <body>
+    <header>
+      <div class="thumb-wrapper">
+        <img class="thumb" src="./assets/user-thumb.png" alt="" />
+        <div class="bedge">7</div>
+      </div>
+      <div class="text-area">
+        <h2 class="greeting">Hi, Mary Jane</h2>
+        <p class="desc">
+          We'll make a mobile magazine<br />
+          using html, css only.
+        </p>
+      </div>
+
+      <a class="mail mouse-effect" href="mailto:anjihhg@gmail.com"> anjihhg@gmail.com</a>
+    </header>
+    <ul class="list">
+      <li class="item mouse-effect">
+        <div class="left">
+          <img src="./assets/icon/bookmark.svg" alt="" />
+          <div class="name">Bookmark</div>
+        </div>
+        <div class="right">
+          <img src="./assets/icon/right_arrow.svg" alt="" />
+        </div>
+      </li>
+      <li class="item mouse-effect">
+        <div class="left">
+          <img src="./assets/icon/account.svg" alt="" />
+          <div class="name">Account info</div>
+        </div>
+        <div class="right">
+          <img src="./assets/icon/right_arrow.svg" alt="" />
+        </div>
+      </li>
+      <li class="item mouse-effect">
+        <div class="left">
+          <img src="./assets/icon/business.svg" alt="" />
+          <div class="name">Business</div>
+        </div>
+        <div class="right">
+          <img src="./assets/icon/right_arrow.svg" alt="" />
+        </div>
+      </li>
+      <li class="item mouse-effect">
+        <div class="left">
+          <img src="./assets/icon/puzzle.svg" alt="" />
+          <div class="name">Blah Blah</div>
+        </div>
+        <div class="right">
+          <img src="./assets/icon/right_arrow.svg" alt="" />
+        </div>
+      </li>
+    </ul>
+
+    <nav class="gnb">
+      <a href="./index.html" class="cover mouse-effect">
+        <img src="./assets/icon/cover.svg" alt="" />
+      </a>
+      <a href="./issue.html" class="issue mouse-effect">
+        <img src="./assets/icon/issue.svg" alt="" />
+      </a>
+      <a href="./like.html" class="like mouse-effect">
+        <img src="./assets/icon/like.svg" alt="" />
+      </a>
+      <a href="./mypage.html" class="mypage mouse-effect active">
+        <img src="./assets/icon/more.svg" alt="" />
+      </a>
+    </nav>
+
+    <!-- modal -->
+    <div class="overlay"></div>
+
+    <div class="modal-wrapper">
+      <div class="modal-inner">
+        <div class="thumb"></div>
+        <div class="bottom-info">
+          <div class="title">Dear, Designers.</div>
+          <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has been the industry's standard.</p>
+          <a href="./mypage.html">Close</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

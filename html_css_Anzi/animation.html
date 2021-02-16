@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      @keyframes show {
+        /* from-to, 0%-50%-100% %로 지정도 가능! */
+        from {
+          opacity: 0;
+          background-color: yellow;
+          transform: translateX(0);
+        }
+
+        to {
+          opacity: 1;
+          background-color: green;
+          transform: translateX(100px);
+        }
+      }
+
+      #parent {
+        /* z축 값, 3d값 표현할때 사용 */
+        perspective: 200px;
+      }
+
+      #element {
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        transition: 1s;
+        /* animation-name: show;
+        animation-duration: 3s;
+        animation-fill-mode: forwards; */
+        animation: show 2s forwards;
+        animation-delay: 1s;
+        animation-fill-mode: both;
+        animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      #element:hover {
+        /* background-color: blue; */
+        /* transform scale의 시작점은 center */
+        /* transform: translateY(100px) scaleX(2); */
+        /* Z값을 사용할땐 부모에  perspective값 설정해주기 */
+        /* transform: translateZ(100px); */
+        /* transform: rotate(180deg); */
+        /* transform: translate3d(30px, 30px, 50px); */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <div id="element"></div>
+    </div>
+  </body>
+</html>

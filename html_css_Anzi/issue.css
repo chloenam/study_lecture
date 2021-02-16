@@ -1,0 +1,161 @@
+.featured {
+  position: relative;
+  height: 310px;
+  background-color: #000;
+  /* background image */
+  background-image: url(./assets/issue-1.jpg);
+  background-size: cover;
+}
+
+.count {
+  position: absolute;
+  top: 30px;
+  right: 26px;
+}
+
+.text-area {
+  position: absolute;
+  bottom: 36px;
+  left: 24px;
+}
+
+.featured .title {
+  margin-bottom: 12px;
+}
+
+sup {
+  font-size: 10px;
+}
+
+/* 가로스크롤 */
+
+/*
+이렇게 비율이 맞아야하는 것은 background image로 해주기 
+.swiper li img {
+  width: 136px;
+  height: 80px;
+} */
+.swiper {
+  /* 줄바꿈 : wrap 줄 안바꿈 : nowrap */
+  white-space: nowrap;
+  /* mobile용이기때문에 디자인스크롤은 신경안써도됨  */
+  overflow-x: scroll;
+  padding: 24px;
+  padding-bottom: 7px;
+}
+
+.swiper li {
+  width: 136px;
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+  /* inlineblock을 사용하면 이상한 마진이 생김.. */
+  display: inline-block;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.swiper li:first-child {
+  background-image: url(./assets/issue-2.jpg);
+}
+
+.swiper li:nth-child(2) {
+  background-image: url(./assets/issue-3.jpg);
+}
+
+.swiper li:last-child {
+  background-image: url(./assets/issue-4.jpg);
+}
+
+/* old한 방법 
+.list {
+}
+
+.item {
+  padding: 17px 24px 20px;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+* 리스트 시작 *
+.item .num {
+  width: 26px;
+  height: 26px;
+  background-color: #ffe6cf;
+  color: #485762;
+  border-radius: 50%;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 20px;
+  position: absolute;
+  top: 50%;
+
+  margin-top: -13px; *높이의 반만큼 
+}
+
+.item .infos {
+  display: inline-block;
+  width: 80%;
+  margin-left: 36px;
+}
+
+.item .title {
+  font-size: 17px;
+}
+
+.item .desc {
+  font-size: 13px;
+  opacity: 0.7;
+}
+*/
+
+.item a {
+  position: relative;
+  padding: 17px 24px 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  z-index: 1;
+}
+
+/* effect 
+가상요소(pseudo element) :before , :after 
+.item::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.2s;
+}
+
+.item:hover:after {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.item:active:after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+*/
+
+.item a .num {
+  width: 26px;
+  height: 26px;
+  background-color: #ffe6cf;
+  color: #485762;
+  border-radius: 50%;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  margin-right: 20px;
+}
+
+.item a .title {
+  font-size: 17px;
+}
+
+.item a .desc {
+  font-size: 13px;
+  opacity: 0.7;
+}
