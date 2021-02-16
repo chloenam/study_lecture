@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.parent {
+  overflow: hidden;
+  width: 400px;
+  margin: 0 auto;
+  background-color: #eff2f7;
+}
+
+.parent::after {
+  content: '';
+  clear: left;
+  display: block;
+}
+
+.child {
+  float: left;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+}
+
+.red {
+  /* width: 100px; */
+  background-color: #ff4949;
+}
+
+.yellow {
+  background-color: #ffc82c;
+}
+
+.blue {
+  background-color: #0066ff;
+}
+
+.other {
+  background-color: #000;
+  color: #fff;
+}
+
+/* css로 만들어낸 가상요소 */
+/* 가상요소의 display는 inline 이므로 크기 또는 여백을 주고싶다면 */
+/* display를 block 또는 inlink-block으로 변경 */
+.pseudo::before {
+  /* content는 필수 property */
+  content: '⭐';
+  /* 이런거 다가능! */
+  margin-right: 20px;
+  font-size: 30px;
+}
+
+.pseudo::after {
+  content: '!';
+  font-style: italic;
+  width: 10px;
+  height: 20px;
+  display: inline-block;
+  background-color: pink;
+}

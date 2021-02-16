@@ -1,0 +1,91 @@
+/* ▼ WHERE YOUR CODE BEGINS */
+/* Typography library */
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  letter-spacing: -0.015em;
+}
+
+/* font size */
+/* naming 통일되게 하기 */
+.fs-tiny {
+  font-size: 12px;
+  line-height: 1.3333333;
+}
+
+.fs-small {
+  font-size: 14px;
+  line-height: 1.42857143;
+}
+
+.fs-base {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.fs-medium {
+  font-size: 18px;
+  line-height: 1.5555555;
+}
+
+.fs-large {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.fs-h2 {
+  font-size: 28px;
+  line-height: 1.481;
+}
+
+.fs-h1 {
+  font-size: 34px;
+  line-height: 1.41176471;
+}
+
+/* font weight */
+.fw-light {
+  font-weight: 300;
+}
+.fw-regular {
+  font-weight: 400;
+}
+.fw-medium {
+  font-weight: 500;
+}
+.fw-bold {
+  font-weight: 700;
+}
+
+/* font color */
+
+.text-dark {
+  color: #1f2d3d;
+}
+
+.text-primary {
+  color: #3c4858;
+}
+
+.text-secondary {
+  color: #8492a6;
+}
+
+.text-tertiary {
+  color: #c0ccda;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-success {
+  color: #13ce66;
+}
+
+.text-error {
+  color: #ff5216;
+}
+.text-info {
+  color: #009eeb;
+}

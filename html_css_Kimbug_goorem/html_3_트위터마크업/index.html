@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter Markup Challenge</title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <a href="#">
+          <img src="#" alt="Twitter" />
+        </a>
+      </h1>
+      <!-- 문서간의 이동을 할 수 있는 메뉴 = nav -->
+      <nav>
+        <!-- 반드시 제목을 명시해야함!!! -->
+        <h1>Global Navigation Menu</h1>
+        <ul>
+          <li>
+            <a href="#">
+              <!-- 스크린 리더 -->
+              <span>Current Page</span>
+              <!-- 아이콘 -->
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <!-- 아이콘 -->
+              Explore
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <!-- 스크린리더(중요하다고 생각해서 strong) -->
+              <strong aria-label="5 Unread notifications">5</strong>
+              <!-- 아이콘 -->
+              Notifications
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <!-- 아이콘 -->
+              Messages
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <!-- 아이콘 -->
+              Bookmarks
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <!-- 아이콘 -->
+              Lists
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <!-- 아이콘 -->
+              Profile
+            </a>
+          </li>
+          <li>
+            <button>
+              <!-- 아이콘 -->
+              More
+            </button>
+            <!-- DROPDOWN MENU 작성하기 -->
+          </li>
+        </ul>
+        <button type="button">Tweet</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- main header -->
+      <header>
+        <h1>Home</h1>
+        <button type="button" aria-label="Timeline options">
+          <!-- Icon -->
+        </button>
+        <!-- button을 눌렀을 때 나오는 영역    -->
+        <div>
+          <h2>Home shows you top Tweets first</h2>
+          <button type="button">
+            <!-- Icon -->
+            <strong>See latest Tweets instead</strong>
+            <span>You'll be switched back Home after you've been away for a while.</span>
+          </button>
+          <a href="#">
+            <!-- Icon -->
+            View content preferences
+          </a>
+        </div>
+      </header>
+
+      <!-- form section -->
+      <section>
+        <!-- 보이지 않는 heading 태그이지만 꼭 써주기 -->
+        <h1>What's happening?</h1>
+
+        <form action="#" method="POST">
+          <img src="#" alt="@user" />
+          <!-- 글자 최대 280자 제한 -->
+          <textarea placeholder="What's happening?" maxlength="280"></textarea>
+          <!-- buttons -->
+          <!-- multiple = 여러가지 파일 업로드 가능 -->
+          <!-- accept = 허용 가능한 확장자 작성 *(모두 다 라는 뜻!) -->
+          <button type="button" aria-label="Upload files">
+            <!-- Icon -->
+          </button>
+          <!-- input tag는 css 적용하기가 힘듦 그래서 button을 만들어서 js로 입힐예정-그냥 알아두기 -->
+          <input type="file" multiple accept="image/*, video/*" />
+
+          <button type="button" aria-label="Search GIFs...">
+            <!-- Icon -->
+          </button>
+          <button type="button" aria-label="Create a poll">
+            <!-- Icon -->
+          </button>
+          <button type="button" aria-label="Choose emoji">
+            <!-- Icon -->
+          </button>
+          <!-- textarea에 입력시 현재 입력 정도를 알려주는 ui -->
+          <!-- js로 0에서 숫자가 올라갈 수 있도록 처리해주 예정-그냥 알아두기 -->
+          <strong aria-label="0 out 280 characters"></strong>
+          <button type="button" aria-label="Add another tweet">
+            <!-- Icon -->
+          </button>
+          <button type="submit">Tweet</button>
+        </form>
+      </section>
+      <section>
+        <!-- 보이지 않는 heading 태그이지만 꼭 써주기 -->
+        <h1>Your Timeline</h1>
+        <!-- tweet의 순서는 중요하다 생각해서 ol사용 -->
+        <ol>
+          <li>
+            <article>
+              <h1>A Tweet from 김익명</h1>
+
+              <header>
+                <a href="#"><img src="#" alt="김익명" /></a>
+                <!-- h2 또는 strong 사용해도 상관없음 -->
+                <h2>
+                  <a href="#">김익명</a>
+                </h2>
+                <dl>
+                  <div>
+                    <!-- 눈에 보이지 않지만 작성해주기 -->
+                    <dt>User name</dt>
+                    <dd>
+                      <a href="#">@anonymouskim</a>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Posted</dt>
+                    <dd>
+                      <a href="#">Dec 25</a>
+                    </dd>
+                  </div>
+                </dl>
+                <button type="button" aria-label="Options">
+                  <!-- Icon -->
+                </button>
+                <!-- button 눌렀을 때 나오는 영역 -->
+                <div>
+                  <button type="button">
+                    <!-- Icon -->
+                    Show less often
+                  </button>
+                  <button type="button">
+                    <!-- Icon -->
+                    Embed Tweet
+                  </button>
+                  <button type="button">
+                    <!-- Icon -->
+                    Unfollow @anonymouskim
+                  </button>
+                  <button type="button">
+                    <!-- Icon -->
+                    Mute @anonymouskim
+                  </button>
+                  <button type="button">
+                    <!-- Icon -->
+                    Block @anonymouskim
+                  </button>
+                  <button type="button">
+                    <!-- Icon -->
+                    Report Tweet
+                  </button>
+                </div>
+              </header>
+
+              <p>영어를 더 잘 하고싶다. 그러나 공부를 하고 싶지는 않다. 내 삶의 모든 것이 이런 식으로 망해왔다</p>
+
+              <!-- 하단부의 느낌이므로 footer 사용 -->
+              <footer>
+                <button type="button">
+                  <!-- Icon -->
+                  <!-- 스크린 리더 = css로 sr-only 처리 예정 -->
+                  <span class="sr-only">Tweet your reply</span>
+                  <strong aria-label="3 replied">3</strong>
+                </button>
+                <button type="button">
+                  <!-- Icon -->
+                  <!-- 스크린 리더 = css로 sr-only 처리 예정 -->
+                  <span class="sr-only">Retweet</span>
+                  <strong aria-label="3 retweeted">3</strong>
+                </button>
+                <!-- retweet버튼 눌렀을 때 나오는 영역 -->
+                <div>
+                  <!-- 어떠한 페이지로 가는 것이 아닌 작용일 일어날 땐 button을 사용(실무에서 정말 많이 사용하게됨) -->
+                  <button type="button">Retweet</button>
+                  <button type="button">Retweet with comment</button>
+                </div>
+                <button type="button">
+                  <!-- Icon -->
+                  <span class="sr-only">Like this tweet</span>
+                  <strong aria-label="100 liked">100</strong>
+                </button>
+                <button type="button">
+                  <!-- Icon -->
+                  <span class="sr-only">Share</span>
+                </button>
+                <!-- share 버튼 눌렀을 때 나오는 영역 -->
+                <div>
+                  <button type="button">Send via Direct Message</button>
+                  <button type="button">Add Tweet to Bookmarks</button>
+                  <button type="button">Copy link to Tweet</button>
+                </div>
+              </footer>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h1>A Tweet from 김익명</h1>
+
+              <header>
+                <a href="#"><img src="#" alt="김익명" /></a>
+                <!-- h2 또는 strong 사용해도 상관없음 -->
+                <h2>
+                  <a href="#">김익명</a>
+                </h2>
+                <dl>
+                  <div>
+                    <!-- 눈에 보이지 않지만 작성해주기 -->
+                    <dt>User name</dt>
+                    <dd>
+                      <a href="#">@anonymouskim</a>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Posted</dt>
+                    <dd>
+                      <a href="#">Dec 25</a>
+                    </dd>
+                  </div>
+                </dl>
+                <button type="button" aria-label="Options">
+                  <!-- Icon -->
+                </button>
+                <!-- button 눌렀을 때 나오는 영역 -->
+                <div>
+                  <button type="button">
+                    <!-- Icon -->
+                    Show less often
+                  </button>
+                  <button type="button">
+                    <!-- Icon -->
+                    Embed Tweet
+                  </button>
+                  <button type="button">
+                    <!-- Icon -->
+                    Unfollow @anonymouskim
+                  </button>
+                  <button type="button">
+                    <!-- Icon -->
+                    Mute @anonymouskim
+                  </button>
+                  <button type="button">
+                    <!-- Icon -->
+                    Block @anonymouskim
+                  </button>
+                  <button type="button">
+                    <!-- Icon -->
+                    Report Tweet
+                  </button>
+                </div>
+              </header>
+
+              <p>영어를 더 잘 하고싶다. 그러나 공부를 하고 싶지는 않다. 내 삶의 모든 것이 이런 식으로 망해왔다</p>
+
+              <!-- 하단부의 느낌이므로 footer 사용 -->
+              <footer>
+                <button type="button">
+                  <!-- Icon -->
+                  <!-- 스크린 리더 = css로 sr-only 처리 예정 -->
+                  <span class="sr-only">Tweet your reply</span>
+                  <strong aria-label="3 replied">3</strong>
+                </button>
+                <button type="button">
+                  <!-- Icon -->
+                  <!-- 스크린 리더 = css로 sr-only 처리 예정 -->
+                  <span class="sr-only">Retweet</span>
+                  <strong aria-label="3 retweeted">3</strong>
+                </button>
+                <!-- retweet버튼 눌렀을 때 나오는 영역 -->
+                <div>
+                  <!-- 어떠한 페이지로 가는 것이 아닌 작용일 일어날 땐 button을 사용(실무에서 정말 많이 사용하게됨) -->
+                  <button type="button">Retweet</button>
+                  <button type="button">Retweet with comment</button>
+                </div>
+                <button type="button">
+                  <!-- Icon -->
+                  <span class="sr-only">Like this tweet</span>
+                  <strong aria-label="100 liked">100</strong>
+                </button>
+                <button type="button">
+                  <!-- Icon -->
+                  <span class="sr-only">Share</span>
+                </button>
+                <!-- share 버튼 눌렀을 때 나오는 영역 -->
+                <div>
+                  <button type="button">Send via Direct Message</button>
+                  <button type="button">Add Tweet to Bookmarks</button>
+                  <button type="button">Copy link to Tweet</button>
+                </div>
+              </footer>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h1>A Tweet from 김익명</h1>
+
+              <header>
+                <a href="#"><img src="#" alt="김익명" /></a>
+                <!-- h2 또는 strong 사용해도 상관없음 -->
+                <h2>
+                  <a href="#">김익명</a>
+                </h2>
+                <dl>
+                  <div>
+                    <!-- 눈에 보이지 않지만 작성해주기 -->
+                    <dt>User name</dt>
+                    <dd>
+                      <a href="#">@anonymouskim</a>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Posted</dt>
+                    <dd>
+                      <a href="#">Dec 25</a>
+                    </dd>
+                  </div>
+                </dl>
+                <button type="button" aria-label="Options">
+                  <!-- Icon -->
+                </button>
+                <!-- button 눌렀을 때 나오는 영역 -->
+                <div>
+                  <button type="button">
+                    <!-- Icon -->
+                    Show less often
+                  </button>
+                  <button type="button">
+                    <!-- Icon -->
+                    Embed Tweet
+                  </button>
+                  <button type="button">
+                    <!-- Icon -->
+                    Unfollow @anonymouskim
+                  </button>
+                  <button type="button">
+                    <!-- Icon -->
+                    Mute @anonymouskim
+                  </button>
+                  <button type="button">
+                    <!-- Icon -->
+                    Block @anonymouskim
+                  </button>
+                  <button type="button">
+                    <!-- Icon -->
+                    Report Tweet
+                  </button>
+                </div>
+              </header>
+
+              <p>영어를 더 잘 하고싶다. 그러나 공부를 하고 싶지는 않다. 내 삶의 모든 것이 이런 식으로 망해왔다</p>
+
+              <!-- 하단부의 느낌이므로 footer 사용 -->
+              <footer>
+                <button type="button">
+                  <!-- Icon -->
+                  <!-- 스크린 리더 = css로 sr-only 처리 예정 -->
+                  <span class="sr-only">Tweet your reply</span>
+                  <strong aria-label="3 replied">3</strong>
+                </button>
+                <button type="button">
+                  <!-- Icon -->
+                  <!-- 스크린 리더 = css로 sr-only 처리 예정 -->
+                  <span class="sr-only">Retweet</span>
+                  <strong aria-label="3 retweeted">3</strong>
+                </button>
+                <!-- retweet버튼 눌렀을 때 나오는 영역 -->
+                <div>
+                  <!-- 어떠한 페이지로 가는 것이 아닌 작용일 일어날 땐 button을 사용(실무에서 정말 많이 사용하게됨) -->
+                  <button type="button">Retweet</button>
+                  <button type="button">Retweet with comment</button>
+                </div>
+                <button type="button">
+                  <!-- Icon -->
+                  <span class="sr-only">Like this tweet</span>
+                  <strong aria-label="100 liked">100</strong>
+                </button>
+                <button type="button">
+                  <!-- Icon -->
+                  <span class="sr-only">Share</span>
+                </button>
+                <!-- share 버튼 눌렀을 때 나오는 영역 -->
+                <div>
+                  <button type="button">Send via Direct Message</button>
+                  <button type="button">Add Tweet to Bookmarks</button>
+                  <button type="button">Copy link to Tweet</button>
+                </div>
+              </footer>
+            </article>
+          </li>
+        </ol>
+      </section>
+    </main>
+
+    <aside>
+      <header>
+        <h1>Worldwide trends</h1>
+        <button type="button" aria-label="Options">
+          <!-- Icon -->
+        </button>
+      </header>
+      <ol>
+        <li>
+          <button type="button" aria-label="Options">
+            <!-- Icon -->
+          </button>
+          <!-- button 눌렀을 시 나오는 dropdown menu -->
+          <div>
+            <button type="button">
+              <!-- Icon -->
+              This trend is spam
+            </button>
+            <button type="button">
+              <!-- Icon -->
+              This trend is abusive or harmful
+            </button>
+            <button type="button">
+              <!-- Icon -->
+              This trend is a duplicate
+            </button>
+            <button type="button">
+              <!-- Icon -->
+              This trend is low quality
+            </button>
+          </div>
+
+          <a href="#">
+            <span>1 · Trending worldwide</span>
+            <strong lang="ko">#김버그</strong>
+            <span>100K Tweets</span>
+          </a>
+        </li>
+        <li>
+          <button type="button" aria-label="Options">
+            <!-- Icon -->
+          </button>
+          <!-- button 눌렀을 시 나오는 dropdown menu -->
+          <div>
+            <button type="button">
+              <!-- Icon -->
+              This trend is spam
+            </button>
+            <button type="button">
+              <!-- Icon -->
+              This trend is abusive or harmful
+            </button>
+            <button type="button">
+              <!-- Icon -->
+              This trend is a duplicate
+            </button>
+            <button type="button">
+              <!-- Icon -->
+              This trend is low quality
+            </button>
+          </div>
+
+          <a href="#">
+            <span>2 · Trending worldwide</span>
+            <strong lang="ko">#김버그</strong>
+            <span>100K Tweets</span>
+          </a>
+        </li>
+        <li>
+          <button type="button" aria-label="Options">
+            <!-- Icon -->
+          </button>
+          <!-- button 눌렀을 시 나오는 dropdown menu -->
+          <div>
+            <button type="button">
+              <!-- Icon -->
+              This trend is spam
+            </button>
+            <button type="button">
+              <!-- Icon -->
+              This trend is abusive or harmful
+            </button>
+            <button type="button">
+              <!-- Icon -->
+              This trend is a duplicate
+            </button>
+            <button type="button">
+              <!-- Icon -->
+              This trend is low quality
+            </button>
+          </div>
+
+          <a href="#">
+            <span>3 · Trending worldwide</span>
+            <strong lang="ko">#김버그</strong>
+            <span>100K Tweets</span>
+          </a>
+        </li>
+        <li>
+          <button type="button" aria-label="Options">
+            <!-- Icon -->
+          </button>
+          <!-- button 눌렀을 시 나오는 dropdown menu -->
+          <div>
+            <button type="button">
+              <!-- Icon -->
+              This trend is spam
+            </button>
+            <button type="button">
+              <!-- Icon -->
+              This trend is abusive or harmful
+            </button>
+            <button type="button">
+              <!-- Icon -->
+              This trend is a duplicate
+            </button>
+            <button type="button">
+              <!-- Icon -->
+              This trend is low quality
+            </button>
+          </div>
+
+          <a href="#">
+            <span>4 · Trending worldwide</span>
+            <strong lang="ko">#김버그</strong>
+            <span>100K Tweets</span>
+          </a>
+        </li>
+        <li>
+          <button type="button" aria-label="Options">
+            <!-- Icon -->
+          </button>
+          <!-- button 눌렀을 시 나오는 dropdown menu -->
+          <div>
+            <button type="button">
+              <!-- Icon -->
+              This trend is spam
+            </button>
+            <button type="button">
+              <!-- Icon -->
+              This trend is abusive or harmful
+            </button>
+            <button type="button">
+              <!-- Icon -->
+              This trend is a duplicate
+            </button>
+            <button type="button">
+              <!-- Icon -->
+              This trend is low quality
+            </button>
+          </div>
+
+          <a href="#">
+            <span>5 · Trending worldwide</span>
+            <strong lang="ko">#김버그</strong>
+            <span>100K Tweets</span>
+          </a>
+        </li>
+      </ol>
+      <!-- footer로 감싸도 상관 없음 -->
+      <footer>
+        <button type="button">Show more</button>
+      </footer>
+    </aside>
+
+    <footer>
+      <!-- list로 작성해도 좋음 -->
+      <a href="#" target="_blank">Terms</a>
+      <a href="#" target="_blank">Privacy policy</a>
+      <a href="#" target="_blank">Cookies</a>
+      <a href="#" target="_blank">Ads info</a>
+      <button type="button">
+        More
+        <!-- Icon -->
+      </button>
+      <!-- more button 눌렀을 시 나오는 영역 -->
+      <div>
+        <a href="#" target="_blank">About</a>
+        <a href="#" target="_blank">Status</a>
+        <a href="#" target="_blank">Businesses</a>
+        <a href="#" target="_blank">Developers</a>
+      </div>
+      <span>© 2019 Twitter, Inc.</span>
+    </footer>
+  </body>
+</html>

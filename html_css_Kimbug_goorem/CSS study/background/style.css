@@ -1,0 +1,234 @@
+.like-button {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* ▼ WHERE YOUR CODE BEGINS 
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.card{
+  display: flex;
+  padding: 24px;
+}
+
+.card-image {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin-right: 20px;
+  background-image: url(./assets/img-house.jpg);
+  background-size: cover;
+  background-position: center center;
+  border-radius: 6px;
+}
+
+.like-button {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 36px;
+  height: 36px;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  background-color: #fff;
+  background-image: url(./assets/icon-favorite.svg);
+  background-repeat: no-repeat;
+  background-size: 22px auto;
+  background-position: center center;
+}
+
+.card-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+
+.plus-badge {
+  width: 48px;
+  height: 22px;
+  margin-right: 8px;
+  padding: 1px 8px;
+  background-color: #92174d;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.property-type {
+  color: #7d858f;
+}
+
+.property-rate::before {
+  content: url(./assets/icon-star.svg);
+}
+
+.property-rate span {
+  7D858F, 100%
+}
+
+.card-title {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.sr-only {
+  display: none;
+}
+
+.property-detail{
+  color : #7D858F;
+}
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.sr-only {
+  /* 스크린리더조차 보지못해서 좋지않음
+  display: none; */
+  /* 집나가게 만들어버리기 */
+  position: absolute;
+  z-index: -100;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.card {
+  display: flex;
+  width: 840px;
+  padding: 24px;
+}
+
+.card-image {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin-right: 24px;
+  border-radius: 6px;
+  background-image: url(./assets/img-house.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}
+
+.card-image .like-button {
+  width: 36px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  border: none;
+  outline: none;
+  background-image: url(./assets/icon-favorite.svg);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.plus-badge {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 1px 8px;
+  background-color: #92174d;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4285714286;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.card-content {
+  /* 남은 영역만큼 늘릴 것인지에 대해 정수로 작성해서 적용해줄수 있음 */
+  flex-grow: 1;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.property-type span {
+  color: #7d858f;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.property-rate {
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.property-rate strong {
+  color: #151b26;
+  font-weight: 400;
+}
+
+.property-rate span {
+  color: #7d858f;
+}
+
+.property-rate::before {
+  content: '';
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(./assets/icon-star.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.card-title {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #151b26;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.property-detail {
+  color: #7d858f;
+  font-size: 14px;
+  line-height: 1.1428572429;
+}
+
+/* 가상 요소는 inline이지만 margin left,right는 적용가능함 */
+.property-detail dd span::after {
+  content: '·';
+  margin: 0 8px;
+}
+
+.property-detail dd span:last-child::after {
+  content: '';
+  margin: 0;
+}
+
+.property-detail div:first-child {
+  margin-bottom: 8px;
+}
