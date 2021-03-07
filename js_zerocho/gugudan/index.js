@@ -1,5 +1,8 @@
 // console.log("hello world");
 // document.write("hello world");
+
+//button에 clickevent
+document.querySelector("#click").addEventListener("click", () => {
   //변수선언(저장)
   const first = document.querySelector("#first").value;
   const second = document.querySelector("#second").value;
@@ -21,3 +24,4 @@
     //no
     result.textContent = "첫번째 값 입력해주세요";
   }
+});
