@@ -3,7 +3,7 @@
 
 //button에 clickevent
 document.querySelector("#click").addEventListener("click", () => {
-  //변수선언(저장)
+  //변수선언(저장), 효율적으로 사용할수 있도록 하기
   const first = document.querySelector("#first").value;
   const second = document.querySelector("#second").value;
   const result = document.querySelector("#result");
@@ -13,7 +13,6 @@ document.querySelector("#click").addEventListener("click", () => {
     //yes
     if (second) {
       //yes
-
       const play = first * second;
       result.textContent = play;
     } else {
