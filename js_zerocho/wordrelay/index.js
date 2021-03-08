@@ -4,11 +4,14 @@ const btn = document.querySelector("#button");
 
 // document.querySelector("아이디")는 그 아이디의 태그를 가져온다.
 btn.addEventListener("click", () => {
+  const wordTag = document.querySelector("#word");
+  const inputTag = document.querySelector("#input");
+  const errorTag = document.querySelector("#error");
   //input은 value, div나 span,button은 textContent로 가져올수있음
   // .은 ~의 라는 뜻 이라고 생각해주면 좋음
   //word, input은 문자열 저장한 변수
-  const word = document.querySelector("#word").textContent;
-  const input = document.querySelector("#input").value;
+  const word = wordTag.textContent;
+  const input = inputTag.value;
 
   //word의 마지막 글자 가져오기
   const lastIndex = word.length - 1;
@@ -20,17 +23,21 @@ btn.addEventListener("click", () => {
   if (lastWord === firstInput) {
     //true
     //input 글자를 제시어로 가져오기
-    document.querySelector("#word").textContent = input;
+    wordTag.textContent = input;
     //error칸에 텍스트 없앰
-    document.querySelector("#error").textContent = "";
+    errorTag.textContent = "";
     //input칸 텍스트 리셋
-    document.querySelector("#input").value = "";
+    inputTag.value = "";
     //input칸 focus / focus는 함수, 동작한느 것
-    document.querySelector("#input").focus();
+    inputTag.focus();
   } else {
     //false
-    document.querySelector("#error").textContent = "땡!";
-    document.querySelector("#input").value = "";
+    //error에 텍스트 작성
+    errorTag.textContent = "땡!";
+    //input칸 텍스트 리셋
+    inputTag.value = "";
+    //input칸 focus / focus는 함수, 동작한느 것
+    inputTag.focus();
   }
 });
 
