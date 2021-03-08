@@ -14,13 +14,15 @@ btn.addEventListener("click", () => {
   const input = inputTag.value;
 
   //word의 마지막 글자 가져오기
+  //한번사용하는 변수들은 그냥 작성해줘도 됨
+  /*
   const lastIndex = word.length - 1;
   const lastWord = word[lastIndex];
   //input의 첫글자를 가져오는 것
   const firstInput = input[0];
-
+  */
   // ===은 같다라는 뜻
-  if (lastWord === firstInput) {
+  if (word[word.length - 1] === input[0]) {
     //true
     //input 글자를 제시어로 가져오기
     wordTag.textContent = input;
