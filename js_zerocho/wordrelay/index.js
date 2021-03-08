@@ -16,4 +16,20 @@ btn.addEventListener("click", () => {
   //input의 첫글자를 가져오는 것
   const firstInput = input[0];
 
+  // ===은 같다라는 뜻
+  if (lastWord === firstInput) {
+    //true
+    //input 글자를 제시어로 가져오기
+    document.querySelector("#word").textContent = input;
+    //error칸에 텍스트 없앰
+    document.querySelector("#error").textContent = "";
+    //input칸 텍스트 리셋
+    document.querySelector("#input").value = "";
+    //input칸 focus / focus는 함수, 동작한느 것
+    document.querySelector("#input").focus();
+  } else {
+    //false
+    document.querySelector("#error").textContent = "땡!";
+    document.querySelector("#input").value = "";
+  }
 });
