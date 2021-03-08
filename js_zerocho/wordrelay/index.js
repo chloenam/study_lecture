@@ -33,3 +33,23 @@ btn.addEventListener("click", () => {
     document.querySelector("#input").value = "";
   }
 });
+
+/*
+
+''
+""
+`` = backtick ⭐
+
+ex)
+'abcde'[0] // 'a'
+'가나다라마'[3] // '라'
+'문자열'.length //3
+문자열 & 객체
+string
+number
+boolean
+object
+null
+undefined
+symbol
+*/
