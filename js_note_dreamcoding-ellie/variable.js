@@ -71,3 +71,11 @@ const helloBob = `hi ${brendan}!`; //template literals (string)
 console.log(`value: ${helloBob}, type: ${typeof helloBob}`);
 console.log("value: " + helloBob + " type: " + typeof helloBob);
 
+// boolean
+// false: 0, null, undefined, NaN, ''
+// true: any other value
+const canRead = true;
+const test = 3 < 1; // false
+console.log(`value: ${canRead}, type: ${typeof canRead}`);
+console.log(`value: ${test}, type: ${typeof test}`);
+
