@@ -100,3 +100,14 @@ console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`);
 const ellie = { name: "ellie", age: 20 };
 ellie.age = 21; //이런식으로 변경이 가능함
 
+// 5. Dynamic typing: dynamically typed language ->prototype할땐 편함
+let text = "hello";
+console.log(text.charAt(0)); //h
+console.log(`value: ${text}, type: ${typeof text}`); //string
+text = 1;
+console.log(`value: ${text}, type: ${typeof text}`); //number
+text = "7" + 5;
+console.log(`value: ${text}, type: ${typeof text}`); //string
+text = "8" / "2";
+console.log(`value: ${text}, type: ${typeof text}`); //number
+console.log(text.charAt(0)); //error
