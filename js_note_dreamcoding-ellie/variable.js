@@ -58,3 +58,7 @@ console.log(infinity);
 console.log(negativeInfinity);
 console.log(nAn);
 
+// bigInt (fairly new, don't use it yet)
+const bigInt = 1234567890123456789012345678901234567890n; // over (-2**53) ~ 2*53)
+console.log(`value: ${bigInt}, type: ${typeof bigInt}`);
+
