@@ -71,3 +71,11 @@ multiplyBtn.addEventListener("click", () => {
   }
 });
 
+//clear
+clearBtn.addEventListener("click", () => {
+  numberInput.value = null;
+  resultInput.value = null;
+  //값 초기화 = null or undefined
+  temp = null;
+  operator = null;
+});
