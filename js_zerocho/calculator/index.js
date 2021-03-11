@@ -79,3 +79,14 @@ clearBtn.addEventListener("click", () => {
   temp = null;
   operator = null;
 });
+
+//들여쓰기 3번이면 다시생각해봐라...
+calculateBtn.addEventListener("click", () => {
+  console.log(operator, temp, numberInput.value);
+  if (operator) {
+  } else {
+    if (numberInput.value) {
+      resultInput.value = temp;
+    }
+  }
+});
