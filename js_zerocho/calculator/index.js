@@ -84,6 +84,22 @@ clearBtn.addEventListener("click", () => {
 calculateBtn.addEventListener("click", () => {
   console.log(operator, temp, numberInput.value);
   if (operator) {
+    if (numberInput.value) {
+      //문자열 + 숫자 = 문자열⭐(+만 이렇게 됨! 중요! 조심!)
+      // -*/는 문자열이있어도 숫자로 인식.
+      if (operator === "+") {
+        resultInput.value = temp + Number(numberInput.value);
+      } else if (operator === "-") {
+        resultInput.value = temp - Number(numberInput.value);
+      } else if (operator === "/") {
+        resultInput.value = temp / Number(numberInput.value);
+      } else if (operator === "*") {
+        resultInput.value = temp * Number(numberInput.value);
+      }
+      //연속 계산 가능하도록
+      //이거는 중복 제거일때 밑으로 빼주기
+      temp = Number(resultInput.value);
+    }
   } else {
     if (numberInput.value) {
       resultInput.value = temp;
