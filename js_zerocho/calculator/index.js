@@ -29,3 +29,45 @@ plusBtn.addEventListener("click", () => {
   //else {}
 });
 
+minusBtn.addEventListener("click", () => {
+  if (temp) {
+    operator = "-";
+    numberInput.value = null;
+  } else {
+    if (numberInput.value) {
+      //'5' -> 5
+      temp = Number(numberInput.value);
+      operator = "-";
+      numberInput.value = null;
+    }
+  }
+});
+
+divideBtn.addEventListener("click", () => {
+  if (temp) {
+    operator = "/";
+    numberInput.value = null;
+  } else {
+    if (numberInput.value) {
+      //'5' -> 5
+      temp = Number(numberInput.value);
+      operator = "/";
+      numberInput.value = null;
+    }
+  }
+});
+
+multiplyBtn.addEventListener("click", () => {
+  if (temp) {
+    operator = "*";
+    numberInput.value = null;
+  } else {
+    if (numberInput.value) {
+      //'5' -> 5
+      temp = Number(numberInput.value);
+      operator = "*";
+      numberInput.value = null;
+    }
+  }
+});
+
